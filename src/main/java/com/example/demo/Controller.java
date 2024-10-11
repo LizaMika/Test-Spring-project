@@ -1,23 +1,36 @@
 package com.example.demo;
 
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/main")
+@RequestMapping("/user")
 public class Controller {
+    private final UserService userService;
 
-    private final InMemoryService inMemoryService = new InMemoryService();
+    public Controller(UserService userService) {
+        this.userService = userService;
+    }
 
-    @GetMapping("/user/{userId}")
-    public User getUserById(@PathVariable int userId) {
-        return inMemoryService.getUserById(userId);
+    @GetMapping("/{userId}")
+    public User getUserById(@PathVariable Long userId) {
+        return userService.getUserById(userId);
+    }
+    @GetMapping
+    public List<User> getAll () {
+        return userService.getAllUsers();
     }
     @PostMapping("/user")
     public User addUser(@RequestBody NewUserDto newUserDto) {
-        return inMemoryService.addUser(newUserDto);
+        return userService.addUser(newUserDto);
+    }
+    @PatchMapping("/{userId}")
+    public User updateUserById (@RequestBody NewUserDto newUserDto, @PathVariable Long userId) {
+        return userService.updateUserById(userId, newUserDto);
+    }
+    @DeleteMapping("/{userId}")
+    public void deleteUserById (@PathVariable Long userId) {
+        userService.deleteUserById(userId);
     }
 }

@@ -28,6 +28,14 @@ import java.time.LocalDateTime;
 import java.util.Base64;
 import java.util.Date;
 
+//TODO: 1. generateSignature - отсутствует реализация цифровой подписи
+//TODO: 2. addLicense - user должен устанавливаться при первой активации
+//TODO: 3. validateActivation - лицензия может быть повторно активирована на другом устройстве
+//TODO: 4. activateLicense - у вас при каждой активации устанавливаются даты. Нужно только при первой
+//TODO: 5. generateTicket - слишком большое время жизни тикета
+//TODO: 6. generateTicket - неверно устанавливается идентификатор пользователя
+//TODO: 7. generateTicket - неверно устанавливается информация о блокировке лицензии
+
 @Service
 @AllArgsConstructor
 @Slf4j

@@ -21,6 +21,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//TODO: 1. registerDevice - почему происходит активация после добавления устройства?
+//TODO: 2. getLicenseInfo - почему в сервисе устройств, а не лицензии?
+
 @Service
 @RequiredArgsConstructor
 @Slf4j

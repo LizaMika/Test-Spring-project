@@ -21,6 +21,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.NoSuchAlgorithmException;
 
+//TODO: 1. В контроллерах не должны возвращаться сущности из базы данных
+//TODO: 2. activateLicense - Для чего проводится проверка аутентификации внутри метода?
+
 @RestController
 @RequestMapping("/license")
 @AllArgsConstructor

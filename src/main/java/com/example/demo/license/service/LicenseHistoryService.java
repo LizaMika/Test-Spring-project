@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//TODO: 1. Читать историю нельзя?
+
 @Service
 @AllArgsConstructor
 public class LicenseHistoryService {

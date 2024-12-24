@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//TODO: 1. Почему типами лицензий может управлять кто угодно?
+
 @RestController
 @RequestMapping("/license-types")
 @AllArgsConstructor

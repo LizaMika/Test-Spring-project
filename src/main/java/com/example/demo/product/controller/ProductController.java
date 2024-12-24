@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//TODO: 1. Почему продуктами может управлять кто угодно?
+
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor

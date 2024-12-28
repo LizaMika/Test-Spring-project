@@ -1,5 +1,6 @@
 package com.example.demo.license.service;
 
+import com.example.demo.errors.NotFoundException;
 import com.example.demo.license.domain.DeviceLicense;
 import com.example.demo.license.domain.License;
 import com.example.demo.license.repository.DeviceLicenseRepository;
